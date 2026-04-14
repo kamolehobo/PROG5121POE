@@ -45,4 +45,15 @@ public String registerUser(String username, String password, String cell, String
 
     return "User successfully registered.";
 }
+public boolean loginUser(String username, String password) {
+    return this.username.equals(username) && this.password.equals(password);
+}
+
+public String returnLoginStatus(boolean success) {
+    if (success) {
+        return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
+    } else {
+        return "Username or password incorrect, please try again.";
+    }
+}
 }
